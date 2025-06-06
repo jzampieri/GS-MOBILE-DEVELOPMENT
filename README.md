@@ -1,56 +1,100 @@
-# Welcome to your Expo app 👋
+# 🌐 Guardian Grid – Inteligência Coletiva contra Apagões
 
-This is an [Expo](https://expo.dev) project created with [`create-expo-app`](https://www.npmjs.com/package/create-expo-app).
+O **Guardian Grid** é uma solução mobile desenvolvida com **React Native + Expo**, que visa ajudar a população a **registrar, monitorar e se preparar para falhas no fornecimento de energia elétrica** causadas por eventos climáticos extremos como chuvas intensas, ventanias e deslizamentos.
 
-## Get started
+## 📱 Aplicativo Mobile
 
-1. Install dependencies
+A proposta é oferecer uma ferramenta **descentralizada**, **offline** e **colaborativa** para que qualquer cidadão possa reportar incidentes de forma simples e segura, mesmo em situações de instabilidade de rede.
 
+---
+
+## ✅ Funcionalidades
+
+- **Registro de Ocorrências**: cadastro de informações como local afetado, duração da interrupção e prejuízos observados.
+- **Listagem Local**: histórico das ocorrências registradas, armazenadas via `AsyncStorage`.
+- **Recomendações de Segurança**: orientações úteis para o usuário saber como agir durante um apagão.
+- **Perfil do Usuário**: cadastro de nome e e-mail, armazenados localmente.
+- **Interface Intuitiva**: navegação por abas inferior com ícones, responsiva e compatível com Android e iOS.
+
+---
+
+## 🧱 Tecnologias Utilizadas
+
+- [React Native](https://reactnative.dev/)
+- [Expo](https://expo.dev/)
+- [AsyncStorage](https://react-native-async-storage.github.io/async-storage/)
+- [Expo Router](https://expo.github.io/router/)
+- [TypeScript](https://www.typescriptlang.org/)
+- [Ionicons](https://icons.expo.fyi/)
+
+---
+
+## 🗂️ Estrutura de Pastas
+
+```
+app/
+├── (tabs)/         # Telas do app (Index, Histórico, Ajuda, Perfil)
+├── _layout.tsx     # Layout principal
+├── +not-found.tsx  # Tela de erro personalizada
+components/
+├── RegistroForm.tsx
+lib/
+├── storage.ts      # Lógica de persistência local
+types/
+├── ocorrencia.ts   # Tipagem
+```
+
+---
+
+## 💾 Armazenamento Local
+
+Todos os dados são salvos localmente com `AsyncStorage`, garantindo:
+- Funcionamento offline
+- Retenção mesmo após fechamento do app
+
+---
+
+## 🧪 Como Executar o Projeto
+
+1. Instale o Expo CLI (caso ainda não tenha):
+   ```bash
+   npm install -g expo-cli
+   ```
+
+2. Clone o repositório:
+   ```bash
+   git clone https://github.com/jzampieri/guardian-grid.git
+   cd guardian-grid
+   ```
+
+3. Instale as dependências:
    ```bash
    npm install
    ```
 
-2. Start the app
-
+4. Inicie o projeto:
    ```bash
    npx expo start
    ```
 
-In the output, you'll find options to open the app in a
+5. Escaneie o QR Code com o app **Expo Go** no seu celular.
 
-- [development build](https://docs.expo.dev/develop/development-builds/introduction/)
-- [Android emulator](https://docs.expo.dev/workflow/android-studio-emulator/)
-- [iOS simulator](https://docs.expo.dev/workflow/ios-simulator/)
-- [Expo Go](https://expo.dev/go), a limited sandbox for trying out app development with Expo
+---
 
-You can start developing by editing the files inside the **app** directory. This project uses [file-based routing](https://docs.expo.dev/router/introduction).
+## 👨‍💻 Equipe
 
-## Get a fresh project
+- João Gabriel Dias – RM: 99092
+- Lucas Carlos Bandeira – RM: 98640
+- Julio Cesar Zampieri – RM: 98772
 
-When you're ready, run:
+---
 
-```bash
-npm run reset-project
-```
+## 🎓 Projeto Acadêmico
 
-This command will move the starter code to the **app-example** directory and create a blank **app** directory where you can start developing.
+Este projeto foi desenvolvido como parte da disciplina de **Mobile Development** no curso de **Engenharia de Software - FIAP**, dentro do desafio **Global Solution 2025**.
 
-## Learn more
+---
 
-To learn more about developing your project with Expo, look at the following resources:
+## 📜 Licença
 
-- [Expo documentation](https://docs.expo.dev/): Learn fundamentals, or go into advanced topics with our [guides](https://docs.expo.dev/guides).
-- [Learn Expo tutorial](https://docs.expo.dev/tutorial/introduction/): Follow a step-by-step tutorial where you'll create a project that runs on Android, iOS, and the web.
-
-## Join the community
-
-Join our community of developers creating universal apps.
-
-- [Expo on GitHub](https://github.com/expo/expo): View our open source platform and contribute.
-- [Discord community](https://chat.expo.dev): Chat with Expo users and ask questions.
-
-
-- cd GS-MOBILE-DEVELOPMENT
-- npm run android
-- npm run ios # you need to use macOS to build the iOS project - use the Expo app if you need to do iOS development without a Mac
-- npm run web
+Uso acadêmico. Todos os direitos reservados à equipe Guardian Grid.
